@@ -5,14 +5,12 @@ const refs = {
 const inputLength = refs.input.getAttribute('data-length');
 
 const inputValidation = () => {
-    const kf = refs.input.value.length === inputLength;
-    console.log(kf);
-    if (refs.input.value.length === inputLength) {
-        refs.input.classList.add('valid');
-        refs.input.classList.remove('invalid');
+    
+      if (refs.input.value.length === Number(inputLength)) {
+          refs.input.classList.add('valid');
+          refs.input.classList.remove('invalid');
     } else {
-        refs.input.classList.add('invalid');
-        refs.input.classList.remove('valid');
+          refs.input.classList.add('invalid');
     };
 };
 
