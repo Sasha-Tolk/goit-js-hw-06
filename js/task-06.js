@@ -1,10 +1,12 @@
 const refs = {
-    input: document.querySelector("#validation-input"), 
+    input: document.querySelector('#validation-input'), 
 };
 
 const inputLength = refs.input.getAttribute('data-length');
 
 const inputValidation = () => {
+    const kf = refs.input.value.length === inputLength;
+    console.log(kf);
     if (refs.input.value.length === inputLength) {
         refs.input.classList.add('valid');
         refs.input.classList.remove('invalid');
